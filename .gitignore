@@ -1,0 +1,27 @@
+# Logs
+*.log
+final-verification.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# SSH credentials
+.ssh/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
