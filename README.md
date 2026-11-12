@@ -1,134 +1,207 @@
-Manjaro Dev Setup
+# 🚀 Manjaro Dev Setup
 
-A complete developer workstation setup and verification toolkit for Manjaro Linux.
+<p align="center">
+  <strong>A Complete Developer Workstation Setup & Verification Toolkit for Manjaro Linux</strong>
+</p>
 
-Automate the installation and configuration of a development environment for Web Development, Python, AI/ML, C/C++, DevOps, databases, networking, graphics, and virtualization.
+<p align="center">
+  Automate your development environment. Configure essential tools. Verify everything. Start building.
+</p>
 
-![Platform](https://img.shields.io/badge/Platform-Manjaro%20Linux-blue) ![Shell](https://img.shields.io/badge/Shell-Bash-green) ![Architecture](https://img.shields.io/badge/Architecture-x86__64-orange) ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Manjaro%20Linux-blue?logo=manjaro&logoColor=white" alt="Platform">
+  <img src="https://img.shields.io/badge/Shell-Bash-green?logo=gnubash&logoColor=white" alt="Shell">
+  <img src="https://img.shields.io/badge/Architecture-x86__64-orange" alt="Architecture">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/Package%20Manager-Pacman-blue" alt="Pacman">
+</p>
 
-Overview
+<p align="center">
+  <a href="#-overview">Overview</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-verification">Verification</a> •
+  <a href="#-security">Security</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
 
-Manjaro Dev Setup is a collection of Bash scripts designed to prepare a complete developer workstation on Manjaro Linux.
+---
 
-Instead of manually installing development tools one by one, you can use the installation script to install a broad set of development packages, configure selected services, create a development workspace, and prepare a Python virtual environment.
+## 📌 Overview
 
-A separate verification script checks whether the expected packages, commands, libraries, extensions, and services are available.
+**Manjaro Dev Setup** is an automated developer workstation provisioning and verification toolkit built specifically for Manjaro Linux.
 
-The project is designed to be reusable, interactive, and relatively safe to run repeatedly.
+Setting up a development environment manually can be repetitive, time-consuming, and inconsistent. This project simplifies that process by providing Bash-based automation scripts that install essential development tools, configure selected services, prepare programming environments, and verify the resulting system configuration.
 
-Features
-1. Essential development utilities
-Git and Git LFS
-GitHub CLI
-cURL and Wget
-jq and yq
-htop and btop
-Fastfetch
-Ripgrep and fd
-fzf and bat
-tmux
-ShellCheck and shfmt
-Pre-commit
-2. Code editors
-Visual Studio Code
-Neovim
-Vim
-3. C and C++ development
-GCC and G++
-Clang and LLVM
-LLDB and GDB
-CMake
-Ninja
-Make
-pkg-config
-ccache
-4. Python and AI/ML development
-Python
-pip
-virtualenv
-NumPy
-SciPy
-Pandas
-Matplotlib
-Scikit-learn
-JupyterLab
-Pyrefly
+Whether you are a Web Developer, Python Developer, AI/ML Engineer, C/C++ Programmer, DevOps Engineer, or Cybersecurity Enthusiast, this toolkit provides a unified starting point for your development workstation.
 
-Python AI/ML libraries are installed inside a dedicated virtual environment:
+### 🎯 Project Objectives
 
-~/Development/Python/venv
+- Automate installation of commonly used development tools.
+- Prepare programming environments for multiple technologies.
+- Configure selected system services.
+- Create a standardized development workspace.
+- Set up an isolated Python environment for AI/ML development.
+- Verify installed packages, commands, libraries, and services.
+- Maintain safe, repeatable, and user-controlled installation workflows.
 
-5. JavaScript and Web development
-Node.js
-npm
-pnpm
-Nginx
-PHP
-PHP-FPM
-Composer
-6. Database development
-PostgreSQL
-MariaDB
-SQLite
-Redis
+## ✨ Features
 
-The installer installs database packages but does not initialize database instances.
+### 1. Essential Development Utilities
 
-7. DevOps and infrastructure
-Docker
-Docker Compose
-Kubernetes CLI (kubectl)
-Helm
-Terraform
-Ansible
-Packer
-Vagrant (optional AUR installation)
-8. Networking tools
-HTTPie
-Nmap
-Wireshark
-tcpdump
-BIND utilities
-traceroute
-net-tools
-9. Intel graphics and GPU utilities
-Mesa
-Intel Media Driver
-Vulkan Intel
-Vulkan tools
-OpenCL utilities
-libva-utils
-clinfo
+A collection of command-line utilities for everyday development and system administration.
 
-The installer does not replace existing graphics drivers.
+| Tool | Purpose |
+|---|---|
+| Git & Git LFS | Version control and large file management |
+| GitHub CLI | GitHub operations from the terminal |
+| cURL & Wget | HTTP requests and file downloads |
+| jq & yq | JSON and YAML processing |
+| htop & btop | System resource monitoring |
+| Fastfetch | System information |
+| Ripgrep & fd | Fast searching and file discovery |
+| fzf & bat | Fuzzy finding and improved file viewing |
+| tmux | Terminal session management |
+| ShellCheck & shfmt | Shell script analysis and formatting |
+| Pre-commit | Automated code quality checks |
 
-10. Virtualization
-QEMU
-virt-manager
-libvirt
-11. VS Code extensions
+### 2. Code Editors
+
+- Visual Studio Code
+- Neovim
+- Vim
+
+### 3. C/C++ Development
+
+Prepare a complete C and C++ development toolchain.
+
+- GCC and G++
+- Clang and LLVM
+- LLDB and GDB
+- CMake
+- Ninja
+- Make
+- pkg-config
+- ccache
+
+### 4. Python & AI/ML Development
+
+Prepare a dedicated Python development environment for data science, machine learning, and experimentation.
+
+**Core tools:**
+- Python
+- pip
+- virtualenv
+- Pyrefly
+
+**AI/ML and Data Science libraries:**
+
+- NumPy
+- SciPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- JupyterLab
+
+Python packages are installed inside an isolated virtual environment:
+
+`~/Development/Python/venv`
+
+This keeps project dependencies separate from system-managed Python packages.
+
+### 5. JavaScript & Web Development
+
+- Node.js
+- npm
+- pnpm
+- Nginx
+- PHP
+- PHP-FPM
+- Composer
+
+### 6. Database Development
+
+Prepare the tools and packages required for database development.
+
+| Database | Purpose |
+|---|---|
+| PostgreSQL | Relational database |
+| MariaDB | Relational database |
+| SQLite | Lightweight embedded database |
+| Redis | In-memory data store |
+
+**Note:** Database packages are installed, but database instances are not automatically initialized.
+
+### 7. DevOps & Infrastructure
+
+Tools for containerization, infrastructure automation, and cloud-native development.
+
+- Docker
+- Docker Compose
+- Kubernetes CLI (kubectl)
+- Helm
+- Terraform
+- Ansible
+- Packer
+- Vagrant (optional AUR installation)
+
+### 8. Networking & Security Tools
+
+Essential utilities for networking, diagnostics, and security testing.
+
+- HTTPie
+- Nmap
+- Wireshark
+- tcpdump
+- BIND utilities
+- traceroute
+- net-tools
+
+### 9. Intel Graphics & GPU Utilities
+
+Installs selected graphics and hardware acceleration utilities without replacing existing graphics drivers.
+
+- Mesa
+- Intel Media Driver
+- Vulkan
+- Intel Vulkan tools
+- OpenCL utilities
+- libva-utils
+- clinfo
+
+### 10. Virtualization
+
+Prepare a virtualization environment using:
+
+- QEMU
+- virt-manager
+- libvirt
+
+### 11. VS Code Extensions
 
 The installer attempts to install extensions for:
 
-Python
-Pyrefly
-C/C++
-CMake
-JavaScript and ESLint
-Prettier
-Docker
-Kubernetes
-Terraform
-Ansible
-GitLens
-Error Lens
-TOML
-12. Development workspace
+| Category | Extensions |
+|---|---|
+| Python | Python, Pyrefly |
+| C/C++ | C/C++ |
+| Build Systems | CMake Tools |
+| JavaScript | ESLint, Prettier |
+| Containers | Docker |
+| Cloud Native | Kubernetes |
+| Infrastructure | Terraform, Ansible |
+| Productivity | GitLens, Error Lens |
+| Configuration | TOML |
 
-The installer creates the following directories:
+Extension installation depends on VS Code availability and extension marketplace connectivity.
 
-text
+### 12. Automated Development Workspace
+
+The installer creates a standardized directory structure under `~/Development/`.
+
+```text
 ~/Development/
+│
 ├── Web/
 ├── Python/
 ├── AI-ML/
@@ -139,300 +212,452 @@ text
 ├── Projects/
 ├── Experiments/
 └── Tools/
+```
 
-Requirements
+Existing directories are preserved.
 
-Before running the installer, make sure you have:
+---
 
-Manjaro Linux
-A working internet connection
-A normal user account with sudo privileges
-Bash
-Pacman
-Sufficient disk space
-An interactive terminal
+## 🛠️ Requirements
 
-Primary target architecture: x86_64.
+Before running the toolkit, ensure your system meets the following requirements.
 
-Installation
-Step 1. Clone the repository
-bash
+| Requirement | Description |
+|---|---|
+| Operating System | Manjaro Linux |
+| Architecture | x86_64 |
+| Shell | Bash |
+| Package Manager | Pacman |
+| Internet | Working internet connection |
+| Permissions | Normal user with sudo privileges |
+| Terminal | Interactive terminal |
+| Storage | Sufficient available disk space |
+
+---
+
+## 📥 Installation
+
+### Step 1 — Clone the Repository
+
+```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
+Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual repository URL.
 
-Replace the placeholder with your actual GitHub repository URL.
+### Step 2 — Enter the Project Directory
 
-Step 2. Enter the project directory
-bash
+```bash
 cd dev-setup
+```
 
-Step 3. Make scripts executable
-bash
+### Step 3 — Make Scripts Executable
+
+```bash
 chmod +x setup-dev.sh verify-setup.sh
+```
 
-Step 4. Run the installer
-bash
+### Step 4 — Run the Installer
+
+```bash
 ./setup-dev.sh
+```
 
+### What Happens During Installation?
 
-The installer will:
+The installation script performs the following operations:
 
-Check the Linux distribution and execution environment.
-Verify network connectivity.
-Request sudo authentication.
-Check repository package availability.
-Update the Manjaro system.
-Install available development packages.
-Offer optional Vagrant installation from the AUR.
-Enable and start Docker and libvirt when installed.
-Create or preserve the Python virtual environment.
-Install Python and AI/ML libraries.
-Attempt to install VS Code extensions.
-Create development workspace directories.
-Configure Git defaults without replacing existing credentials.
-Perform installation checks.
+1. Checks the Linux distribution and execution environment.
+2. Verifies network connectivity.
+3. Requests sudo authentication.
+4. Checks package availability in configured repositories.
+5. Updates the Manjaro system.
+6. Installs available development packages.
+7. Offers optional Vagrant installation from the AUR.
+8. Enables and starts Docker and libvirt when installed.
+9. Creates or preserves the Python virtual environment.
+10. Installs Python and AI/ML libraries.
+11. Attempts to install VS Code extensions.
+12. Creates the development workspace.
+13. Configures Git defaults without replacing existing credentials.
+14. Performs post-installation checks.
 
-Important: Review the package transaction presented by Pacman before confirming it.
+> ⚠️ **Important:** Review the Pacman transaction carefully before confirming package installation. Do not approve unfamiliar or unexpected package changes.
 
-Verify the installation
+---
 
-After the installation finishes, run:
+## 🔍 Verification
 
-bash
+After installation, run the verification script:
+
+```bash
 ./verify-setup.sh
+```
 
+The verification toolkit checks the availability and configuration of the development environment.
 
-The verification script checks:
+### Verification Categories
 
-Pacman packages
-Executable commands
-Python interpreter and libraries
-Pyrefly
-VS Code extensions
-Docker and libvirt services
-Docker daemon access and container execution
-Development directories
-Git configuration
-Graphics utilities
+| Category | Verification |
+|---|---|
+| Pacman | Installed packages |
+| CLI Tools | Executable commands |
+| Python | Interpreter and libraries |
+| Pyrefly | Python tooling |
+| VS Code | Installed extensions |
+| Docker | Service, daemon access, and container execution |
+| Libvirt | Virtualization services |
+| Development Workspace | Expected directories |
+| Git | Configuration |
+| Graphics | Graphics and GPU utilities |
 
-To save the verification output:
+### Save Verification Results
 
-bash
+To save the complete verification report:
+
+```bash
 ./verify-setup.sh 2>&1 | tee final-verification.log
+```
 
+### Verification Summary
 
-The script prints a final summary containing:
+The script reports:
 
-Passed checks
-Missing checks
-Warnings
-Total checks
+- Total checks
+- Passed checks
+- Missing checks
+- Warnings
 
 A nonzero exit status indicates that one or more checks failed.
 
-Python environment
+---
 
-Activate the dedicated Python virtual environment:
+## 🐍 Python Environment
 
-bash
+The toolkit maintains a dedicated Python virtual environment.
+
+### Activate
+
+```bash
 source ~/Development/Python/venv/bin/activate
+```
 
+### Check Python Version
 
-Check the Python version:
-
-bash
+```bash
 python --version
+```
 
+### List Installed Packages
 
-Check installed libraries:
-
-bash
+```bash
 python -m pip list
+```
 
+### Install Additional Packages
 
-Deactivate the environment:
+```bash
+python -m pip install PACKAGE_NAME
+```
 
-bash
+### Deactivate
+
+```bash
 deactivate
+```
 
-Docker
+**Why use a virtual environment?**
 
-Check Docker:
+- Avoids modifying system-managed Python packages.
+- Keeps dependencies isolated.
+- Reduces package conflicts.
+- Provides a cleaner AI/ML development environment.
 
-bash
+---
+
+## 🐳 Docker Configuration
+
+The installer enables and starts the Docker service when Docker is installed.
+
+### Check Docker Version
+
+```bash
+docker --version
+```
+
+### Check Docker Information
+
+```bash
 docker info
+```
 
+### Check Docker Service
 
-Check the service:
+```bash
+sudo systemctl status docker
+```
 
-bash
-systemctl status docker
+### Security Consideration
 
+The installer deliberately does not add your user to the Docker group.
 
-The installer enables and starts Docker but deliberately does not add your user to the Docker group.
+Membership in the Docker group effectively grants highly privileged access to the host system.
 
-Security note: Membership in the Docker group grants highly privileged access to the host system. Understand the security implications before changing Docker permissions.
+Understand the security implications before changing Docker permissions.
 
-Virtualization
+---
 
-Check libvirt:
+## 🖥️ Virtualization Configuration
 
-bash
-systemctl status libvirtd
+The toolkit installs QEMU, virt-manager, and libvirt.
 
+### Check libvirt Service
 
-List virtual machines:
+```bash
+sudo systemctl status libvirtd
+```
 
-bash
+### List Virtual Machines
+
+```bash
 virsh list --all
+```
 
-Git and GitHub
+Virtual machine creation and configuration are left to the user.
 
-Check Git:
+---
 
-bash
+## 🔧 Git & GitHub Configuration
+
+The installer prepares Git and GitHub CLI without automatically replacing existing authentication settings.
+
+### Check Git
+
+```bash
 git --version
+```
 
+### Check GitHub CLI
 
-Check GitHub CLI:
+```bash
+gh --version
+```
 
-bash
+### Check GitHub Authentication
+
+```bash
 gh auth status
+```
 
+Existing Git credentials and authentication configurations are preserved.
 
-The installer does not automatically replace existing Git credentials or authentication settings.
+---
 
-Safety and design principles
+## 🔐 Security & Safety Principles
 
-This project follows several installation principles:
+System configuration and developer workstation automation require careful handling.
 
-Uses configured Manjaro repositories for normal package installation.
-Does not run the installer as root.
-Requests interactive confirmation before proceeding.
-Preserves an existing Python virtual environment.
-Does not automatically replace graphics drivers.
-Does not initialize database instances.
-Does not automatically modify Git credentials.
-Does not automatically add users to the Docker group.
-Requests confirmation before building the optional AUR package.
-Important security considerations
-Review scripts before executing them.
-Review Pacman package transactions.
-Review AUR build files before installation.
-Use sudo only when necessary.
-Never commit API keys, passwords, private SSH keys, or access tokens.
-Back up important data before a major system upgrade.
-Troubleshooting
-Permission denied
+Manjaro Dev Setup follows these principles:
 
-Run:
+| Principle | Implementation |
+|---|---|
+| No root execution | Installer runs as a normal user |
+| Controlled privileges | Requests sudo only when required |
+| Package transparency | Allows review of Pacman transactions |
+| Repository-first installation | Uses configured Manjaro repositories |
+| Existing environment protection | Preserves existing Python virtual environments |
+| Driver safety | Does not replace graphics drivers |
+| Database safety | Does not initialize database instances |
+| Git safety | Does not automatically replace credentials |
+| Docker safety | Does not automatically modify Docker group membership |
+| AUR transparency | Requests confirmation before optional AUR builds |
 
-bash
+### Important Security Recommendations
+
+- Review scripts before executing them.
+- Review package transactions before accepting them.
+- Inspect AUR build files before installation.
+- Use sudo only when necessary.
+- Never commit API keys, passwords, SSH private keys, or access tokens.
+- Back up important files before major system upgrades.
+- Avoid executing unfamiliar installation scripts without inspecting their contents.
+
+---
+
+## 🧰 Troubleshooting
+
+### Permission Denied
+
+Make the scripts executable:
+
+```bash
 chmod +x setup-dev.sh verify-setup.sh
+```
 
-Pacman package not found
+### Package Not Found
 
-Update package databases and inspect package availability:
+Refresh package databases and inspect package availability:
 
-bash
+```bash
 sudo pacman -Syu
 pacman -Si PACKAGE_NAME
-
+```
 
 Some packages may not be available in your configured repositories.
 
-Docker permission denied
+### Docker Permission Denied
 
-Check the service:
+Check whether the Docker service is running:
 
-bash
+```bash
 sudo systemctl status docker
+```
 
+Remember that the installer deliberately avoids automatic Docker group membership changes.
 
-Remember that this installer deliberately does not modify Docker group membership.
-
-Python module missing
+### Python Module Missing
 
 Activate the virtual environment:
 
-bash
+```bash
 source ~/Development/Python/venv/bin/activate
+```
 
+Install the missing package:
 
-Then install the missing module:
-
-bash
+```bash
 python -m pip install PACKAGE_NAME
+```
 
-Libvirt not running
+### Libvirt Not Running
 
-Check:
+Check the service:
 
-bash
+```bash
 sudo systemctl status libvirtd
+```
 
-VS Code extension missing
+### VS Code Extension Missing
 
-Install an extension manually:
+Install the extension manually:
 
-bash
+```bash
 code --install-extension EXTENSION_ID
+```
 
-Project structure
-text
+Replace `EXTENSION_ID` with the required extension identifier.
+
+---
+
+## 📂 Project Structure
+
+```text
 dev-setup/
+│
 ├── README.md
 ├── setup-dev.sh
 ├── verify-setup.sh
 ├── .gitignore
 └── LICENSE
+```
 
-Contributing
+### Main Components
 
-Contributions, bug reports, and suggestions are welcome!
+| File | Responsibility |
+|---|---|
+| `setup-dev.sh` | Installs and configures the development environment |
+| `verify-setup.sh` | Checks installation and configuration |
+| `.gitignore` | Excludes unnecessary and sensitive files |
+| `LICENSE` | Defines project usage and distribution permissions |
 
-To contribute:
+---
 
-Fork the repository.
-Clone your fork.
-Create a new feature branch.
-Make your changes.
-Test the scripts on Manjaro Linux.
-Run ShellCheck where available.
-Submit a pull request.
+## 🗺️ Roadmap
 
-Example:
+The following improvements are potential future development directions.
 
-bash
+- [ ] Modular installation architecture
+- [ ] Interactive package selection
+- [ ] AMD graphics profile
+- [ ] NVIDIA graphics profile
+- [ ] AI coding CLI installation options
+- [ ] Automated ShellCheck testing
+- [ ] GitHub Actions integration
+- [ ] Improved installation logging
+- [ ] Better error recovery
+- [ ] Support for additional Arch-based distributions
+- [ ] Desktop development environment profiles
+- [ ] Automated backup and restore functionality
+
+---
+
+## 🤝 Contributing
+
+Contributions, bug reports, feature requests, and suggestions are welcome.
+
+If you want to improve the project, follow these steps:
+
+### 1. Fork the Repository
+
+Create your own fork of this repository.
+
+### 2. Clone Your Fork
+
+```bash
+git clone YOUR_FORK_URL
+cd dev-setup
+```
+
+### 3. Create a Feature Branch
+
+```bash
 git checkout -b feature/new-development-tools
+```
 
+### 4. Make Your Changes
 
-Run static analysis:
+Implement your feature or fix while preserving existing functionality.
 
-bash
+### 5. Test Your Changes
+
+Run the installer and verification script on a Manjaro Linux system.
+
+### 6. Run ShellCheck
+
+```bash
 shellcheck setup-dev.sh verify-setup.sh
+```
 
-Roadmap
+### 7. Submit a Pull Request
 
-Potential future improvements:
+Push your changes and open a pull request describing your implementation.
 
-Modular installation options
-Interactive package selection
-AMD and NVIDIA graphics profiles
-AI coding CLI installation options
-Automated ShellCheck GitHub Actions
-Improved logging and error recovery
-Support for additional Arch-based distributions
-Desktop development environment profiles
-Automated backup and restore options
-License
+---
 
-No license has been added yet. A license should be selected and committed before others are granted explicit open-source reuse permissions.
+## 📜 License
 
-Acknowledgements
+No license has been added yet.
 
-Built for developers who want a consistent, reproducible, and convenient Manjaro Linux development environment.
+Until a license is selected and committed, others do not automatically receive explicit open-source reuse permissions.
 
-If this project helps you, consider starring the repository and contributing improvements.
+Consider adding an appropriate open-source license before inviting external contributions.
 
-Happy coding!
+---
+
+## 🙌 Acknowledgements
+
+Built for developers who want a cleaner, more consistent, and reproducible development workstation on Manjaro Linux.
+
+The goal is simple:
+
+**Spend less time configuring your machine and more time building software.**
+
+If this project helps you, consider giving the repository a ⭐ and contributing improvements.
+
+<p align="center">
+  <strong>Made with ❤️ for the Developer Community</strong>
+</p>
+
+<p align="center">
+  <sub>Manjaro Dev Setup — Configure. Develop. Verify.</sub>
+</p>
