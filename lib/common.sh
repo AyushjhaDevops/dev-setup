@@ -11,13 +11,11 @@ if [[ -t 1 ]]; then
     DEV_SETUP_GREEN=$'\033[0;32m'
     DEV_SETUP_RED=$'\033[0;31m'
     DEV_SETUP_YELLOW=$'\033[1;33m'
-    DEV_SETUP_BLUE=$'\033[0;34m'
     DEV_SETUP_RESET=$'\033[0m'
 else
     DEV_SETUP_GREEN=''
     DEV_SETUP_RED=''
     DEV_SETUP_YELLOW=''
-    DEV_SETUP_BLUE=''
     DEV_SETUP_RESET=''
 fi
 
