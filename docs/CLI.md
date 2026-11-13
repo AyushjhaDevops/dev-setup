@@ -4,7 +4,7 @@ Phase 1 introduces `dev-setup.sh` as the single command entry point. The
 existing `setup-dev.sh` and `verify-setup.sh` scripts remain in place and
 continue to perform the actual installation and verification work.
 
-## Commands
+## Make the entry point executable\n\nAfter cloning the repository, run:\n\n```bash\nchmod +x dev-setup.sh\n```\n\nThen invoke it as shown below. You can alternatively run it with `bash dev-setup.sh`.\n\n## Commands
 
 | Command | Behavior |
 |---|---|
